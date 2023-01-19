@@ -1,7 +1,3 @@
----
-layout: none
----
-
 <html lang="pl">
 <head>
     <meta charset="UTF-8"/>
@@ -28,6 +24,7 @@ layout: none
         width: 33%;
         float: left;
         overflow-x: scroll;
+        overflow-y: hidden;
         white-space: pre; /* Scroll horizontally, but don't make everything one line in Firefox */
         resize: horizontal;
         border: solid 1px #cbcbcc;
@@ -70,15 +67,16 @@ layout: none
     }
 </style>
 
+<!--suppress RegExpDuplicateCharacterInClass -->
 <script>
     function size(s) {
         if (typeof s != "string") return 0;
         s = s.toLowerCase();
-        s = s.replace(/nau(k|cz)/giu, "nałuk", s);  // nauka, nauczyć
-        s = s.replace(/([aąęoóu])u/giu, (match, $1) => `${$1}ł`, s);
-        s = s.replace(/i([aéąeęioóu])/giu, (match, $1) => `j${$1}`, s);
-        s = s.replace(/puent/giu, "płent", s);  // puenta
-        s = s.replace(/([aéąeęioóuyа])'([aéąeęioóuyа])$/giu, "$2", s);  // Rovne'a
+        s = s.replace(/nau(k|cz)/giu, "nałuk");  // nauka, nauczyć
+        s = s.replace(/([aąęoóu])u/giu, (match, $1) => `${$1}ł`);
+        s = s.replace(/i([aéąeęioóu])/giu, (match, $1) => `j${$1}`);
+        s = s.replace(/puent/giu, "płent");  // puenta
+        s = s.replace(/([aéąeęioóuyа])'([aéąeęioóuyа])$/giu, "$2");  // Rovne'a
         return (s.match(/[aéąeęioóuyаеёиуоыэєяюӗӑyɨʉɯuɪʏʊeøɘɵɤoe̞ø̞əɤ̞o̞ɛœɜɞʌɔæɐaɶäɑɒ]/giu) || []).length;
     }
 

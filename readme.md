@@ -1,5 +1,7 @@
 # Vyershark
 
+A simple page I made some time ago.
+
 Divides Polish words into syllables, and displays a realtime tabular preview of
 a poem's structure. For example, Adam Mickiewicz's famous lines can be clearly
 seen to follow the famous traditional trzynastozgłoskowiec structure.
@@ -19,5 +21,4 @@ simpler by the decision not to divide words into syllables, but to count
 them.
 
 I'm like how the look of the page turned out, the minimal amount of CSS made it
-look
-very minimal and clean.
+look very minimal and clean.

@@ -8,7 +8,7 @@ seen to follow the famous traditional trzynastozgłoskowiec structure.
 
 ## Live demo
 
-Here: [aleshkev.github.io/vyershark](aleshkev.github.io/vyershark).
+Here: [aleshkev.github.io/vyershark](https://aleshkev.github.io/vyershark/).
 
 ## Implementation details
 
